@@ -1,0 +1,30 @@
+@import "../node_modules/normalize.css/normalize.css";
+
+:root {
+  --white: #fafafa;
+  --black: #1f1f1f;
+  --serif: didot, times new roman, serif;
+  --sans: 'Open Sans', gill sans, helvetica, arial, sans-serif;
+  --monospace: prestige elite std, consolas, courier new, monospace;
+}
+
+html, body, main {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: var(--white);
+
+  font-family: var(--sans);
+  color: var(--black);
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--serif);
+}
+
+code, pre {
+  font-family: var(--monospace);
+}

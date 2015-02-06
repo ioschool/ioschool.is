@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var ghpages = require('gh-pages');
+var path = require('path');
+
+buildPath = path.join(__dirname, '..', 'build');
+
+ghpages.publish(buildPath, {
+  repo: "git@github.com/ioschool/ioschool.github.io",
+  branch: "master",
+  logger: function (message) {
+    console.log("deploying... ", buildPath, message);
+  },
+}, function (err) {
+  if (err) { throw err; }
+});
