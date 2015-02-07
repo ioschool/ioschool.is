@@ -1,5 +1,7 @@
 var app = require('connect')();
 
+app.use(require('connect-livereload')());
+
 app.use(require('ecstatic')({
   root: __dirname + "/build",
   baseDir: "/",

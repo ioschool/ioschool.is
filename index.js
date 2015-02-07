@@ -5,7 +5,9 @@ var m = Metalsmith(__dirname)
 .clean(false);
 
 if (process.argv[2] === '-w') {
-  m.use(plugins.watch());
+  m.use(plugins.watch({
+    livereload: true,
+  }));
 }
 
 m.use(plugins.collections({

@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "connect": "^3.3.0",
+    "connect-livereload": "^0.5.2",
     "ecstatic": "^0.5.5",
     "gh-pages": "^0.2.0"
   }
