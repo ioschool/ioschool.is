@@ -21,7 +21,9 @@ m.use(plugins.collections({
 .use(plugins.layouts('swig'))
 .build(function (err, files) {
   if (err) {
-    console.error(err.stack);
+    console.error("message:", err.message);
+    console.error("object:", JSON.stringify(err, null, 2));
+    console.error("stack:", err.stack);
     throw err;
   }
   //console.log(files)
