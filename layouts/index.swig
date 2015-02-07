@@ -21,11 +21,14 @@
 
   </head>
   <body>
+    <a class='fork-me' href='http://github.com/ioschool/ioschool.is'>
+      Fork me on GitHub
+    </a>
 
-
-    <main>
-      {% include "./header.swig" %}
-      {% include "./resources.swig" %}
+    <main class="container">
+      {% autoescape false %}
+      {{ contents }}
+      {% endautoescape %}
     </main>
 
     {% for href in scripts %}

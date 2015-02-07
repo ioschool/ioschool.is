@@ -11,15 +11,19 @@ if (process.argv[2] === '-w') {
 }
 
 m.use(plugins.collections({
-  resources: {
-    pattern: "resources/**/*.md",
+  arts: {
+    pattern: "arts/**/*",
     sortBy: "order",
   },
 }))
 .use(plugins.markdown())
-.use(plugins.templates('swig'))
+.use(plugins.inPlace('swig'))
+.use(plugins.layouts('swig'))
 .build(function (err, files) {
-  if (err) { throw err; }
+  if (err) {
+    console.error(err.stack);
+    throw err;
+  }
   //console.log(files)
 })
 ;

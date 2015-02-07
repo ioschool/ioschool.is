@@ -1,14 +1,70 @@
 ---
-url: http://ioschool.is/
+url: http://ioschool.is
 title: ioschool.is
 site_name: ioschool.is
-description: open source curiculuum on input/output magic
+description: Open source curiculuum on input/output magic.
 image: images/favicon.png
-type: article
-template: index.swig
+type: website
+layout: index.swig
 stylesheets:
   - "./bundle.css"
-  - "http://fonts.googleapis.com/css?family=Open+Sans:300"
 scripts:
   - "./bundle.js"
 ---
+<header class="page-header">
+  <h1>
+    {{ title }}
+  </h1>
+  <p>
+    {{ description }}
+  </p>
+</header>
+<section id="scan">
+  <h2>
+    Overview of our adventure
+  </h2>
+  <p>
+    ioschool is an experiment in open source computer science education. It is based heavily on the existing work of the <a href="http://nodeschool.io">Node School</a> and <a href="http://cyber.wizard.institute">Cyber Wizard Institute</a> curiculuums. We're making this up as we go, if you have feedback please let us know at <a href="https://github.com/ioschool/discussions/issues">ioschool/discussions</a>.
+  </p>
+  <p>
+    During our ioschool journey, we will be learning how to harness the magic of signals and pixels to produce art magic and mad science. While there isn't an explicit focus on learning for the sake of being hired in industry, rest assured that if you become proficient at what is being taught, you will ascend to be a higher level wizard with more than enough skills to pay the bills.
+  </p>
+  <p>
+    While programming can be done in a multitude of languages across many platforms, we will be focusing on javascript (using <a href="http://nodejs.org">Node.js</a>) on Unix-based (Linux or Mac OS) and web browser environments.
+  </p>
+</section>
+
+<section id="setup">
+  <h2>
+    Gearing up for the journey ahead
+  </h2>
+  <p>
+    To begin, we first need a computer that runs Linux or Mac OS. If you have Windows, we will help you install Linux - but you have to be willing to have Linux!
+  </p>
+  <p>
+    Then, you need to follow <a href="/guides/install-js">our guide to install Node.js</a>.
+  </p>
+  <p>
+    Next, you need a <strong>Text Editor</strong>. If you don't have one already, you may want one for editing code. A few options: <a href="http://www.atom.io/">Atom</a> <a href="http://www.sublimetext.com/">Sublime Text</a>, <a href="http://lighttable.com/">Light Table</a>, <a href="http://macromates.com/download">TextMate</a>, <a href="http://brackets.io/">Brackets</a>.
+  </p>
+</section>
+
+<section id="start">
+  <h2>
+    Starting on your path
+  </h2>
+  <p>
+    Choose a magic art to start the journey.
+  </p>
+  <ul>
+  {% for art in collections.arts %}
+    <li>
+      <a href="{{ art.url }}">
+        {{ art.title }}
+      </a>
+      : {{ art.description }}
+    </li>
+  {% endfor %}
+</article>
+  </ul>
+</section>
