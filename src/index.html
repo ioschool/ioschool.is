@@ -168,32 +168,34 @@ arts:
       Choose a magic art to start the journey.
     </p>
   </header>
-  <ul>
+  <ul class="arts">
   {% for art in arts %}
-    <li>
+    <li class="art">
       <header>
         <h2>
           {{ art.name }}
         </h2>
       </header>
-      <ul class="list-group">
+      <ul class="resources list-group">
         {% for resource in art.resources %}
-        <li class="list-group-item">
+        <li class="resource list-group-item">
           <header>
-            {% if resource.url %}
-            <a href="{{ resource.url }}">
-              <h3>{{ resource.name }}</h3>
-            </a>
-            {% else %}
             <h3>{{ resource.name }}</h3>
+
+            {% if resource.url %}
+            <a href="{{ resource.url }}" class="url label label-default">website</a>
             {% endif %}
 
             {% if resource.video %}
-            <a href="{{ resource.video }}" class="video">video</a>
+            <a href="{{ resource.video }}" class="video label label-success">video</a>
             {% endif %}
 
             {% if resource.notes %}
-            <a href="{{ resource.notes }}" class="notes">notes</a>
+            <a href="{{ resource.notes }}" class="notes label label-info">notes</a>
+            {% endif %}
+
+            {% if resource.workshopper %}
+            <a href="https://npmjs.org/packages/{{ resource.workshopper }}" class="workshopper label label-warning">workshopper</a>
             {% endif %}
           </header>
 
@@ -207,5 +209,3 @@ arts:
       </ul>
     </li>
   {% endfor %}
-  </ul>
-</section>
