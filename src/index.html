@@ -2,7 +2,7 @@
 url: http://ioschool.is
 title: i/o school
 site_name: ioschool.is
-description: Open curiculuum on in/out magic, art and mad science.
+description: input/output magic, art and mad science.
 image: /favicon.png
 type: website
 layout: index.swig
@@ -26,48 +26,46 @@ arts:
     video: https://www.youtube.com/watch?v=kOB-V1KstIM
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/javascript.markdown
   - name: Javascript for Cats
-    url: jsforcats.com
+    book: jsforcats.com
   - name: Learn Javascript by adventuring around in the terminal
-    workshopper: javascripting
+    workshop: javascripting
 - name: Git(Hub)
   resources:
   - name: "Cyber Wizard Institute: Git + Github"
     video: https://www.youtube.com/watch?v=IF-z4kOi4fM
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/git.markdown
   - name: "Code School: Try Git"
-    url: https://try.github.io/
+    workshop: https://try.github.io/
   - name: GitHub for Cats
-    url: https://zachbruggeman.me/github-for-cats/
+    book: https://zachbruggeman.me/github-for-cats/
 - name: Async
   resources:
   - name: i/o school - The Art of Async
     description: An introduction to async programming
-    url: /art-of-async
+    notes: /art-of-async
+    workshop: learnyounode
   - name: "Cyber Wizard Institute: Intro to Node.js"
     video: https://www.youtube.com/watch?v=7RQXUlDATbY
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/node_101.md
+    workshop: learnyounode
   - name: The Art of Node
     url: https://github.com/maxogden/art-of-node
-  - name: Learn You The Node.js For Much Win!
-    workshopper: learnyounode
   - name: Callback Hell
     url: http://callbackhell.com/
 - name: Streams
   resources:
-  - name: Stream Adventure
-    workshopper: stream-adventure
-  - name: Stream Handbook
-    url: https://github.com/substack/stream-handbook
+  - name: substack - streams
+    book: https://github.com/substack/stream-handbook
+    workshop: stream-adventure
 - name: Ecosystems
   resources:
   - video: https://www.youtube.com/watch?v=B-IRNyMdYD0
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/require_modules.md
-  - name: Browserify Adventure
-    workshopper: browserify-adventure
-  - name: Browserify Handbook
-    url: https://github.com/substack/browserify-handbook
+  - name: substack - browserify
+    workshop: browserify-adventure
+    book: https://github.com/substack/browserify-handbook
   - name: Finding modules
-    url: http://substack.net/finding_modules
+    post: http://substack.net/finding_modules
 - name: Browser Interfaces
   resources:
   - name: "Cyber Wizard Institute: HTML and CSS"
@@ -77,7 +75,7 @@ arts:
     video: https://www.youtube.com/watch?v=1CJIQF2eL7g
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/dom.markdown
   - name: "Cyber Wizard Institute: The Front End or Who Put The End In The Front?"
-    url: https://github.com/cyberwizardinstitute/workshops/blob/master/html-css-javascript-an-eternal-rgb-triple-rainbo.md
+    post: https://github.com/cyberwizardinstitute/workshops/blob/master/html-css-javascript-an-eternal-rgb-triple-rainbo.md
 - name: User Interfaces
   resources:
   - name: "Cyber Wizard Institute: User Interface"
@@ -119,9 +117,9 @@ arts:
 - name: Apps
   resources:
   - name: substack flavored webapp
-    url: https://github.com/substack/substack-flavored-webapp
+    post: http://substack.net/some_libraries_I_use_to_build_webapps
   - name: Human Javascript
-    url: http://read.humanjavascript.com
+    book: http://read.humanjavascript.com
 ---
 <header class="page-header">
   <h1>
@@ -131,6 +129,7 @@ arts:
     {{ description }}
   </p>
 </header>
+
 <section id="scan">
   <h2>
     Overview of our adventure
@@ -139,10 +138,10 @@ arts:
     i/o school is an experiment in open source computer science education. It is based heavily on the existing work of the <a href="http://nodeschool.io">Node School</a> and <a href="http://cyber.wizard.institute">Cyber Wizard Institute</a> curiculuums. We're making this up as we go, if you have feedback please let us know at <a href="https://github.com/ioschool/discussions/issues">ioschool/discussions</a>.
   </p>
   <p>
-    During our i/o school journey, we will be learning how to harness signals and pixels to produce art, magic and mad science. While there isn't an explicit focus on learning for the sake of being hired in industry, rest assured that if you become proficient at what is being taught, you will ascend to a higher level with more than enough skills to pay the bills.
+    During our i/o school journey, we will be learning how to harness signals and pixels to produce magic, art and mad science. While there isn't an explicit focus on learning for the sake of being hired in industry, rest assured that if you become proficient at what is being taught, you will ascend to a higher level with more than enough skills to pay the bills.
   </p>
   <p>
-    While programming can be done in a multitude of languages across many platforms, we will be focusing on javascript (using <a href="http://nodejs.org">Node.js</a>) on Unix-based (Linux or Mac OS) and web browser environments.
+    While programming can be done in a multitude of languages across many platforms, we will be focusing on javascript (using <a href="http://nodejs.org">Node.js</a>) on Unix or web based environments.
   </p>
 </section>
 
@@ -151,7 +150,7 @@ arts:
     Gearing up for the journey ahead
   </h2>
   <p>
-    To begin, we first need a computer that runs Linux or Mac OS. If you have Windows, we will help you install Linux - but you have to be willing to have Linux!
+    To begin, we first need a computer that runs Unix (Linux or Mac OS). If you have Windows, we will help you install Linux - but you have to be willing to have Linux!
   </p>
   <p>
     Then, you need to follow <a href="/guides/install-js">our guide to install Node.js</a>.
@@ -164,10 +163,10 @@ arts:
 <section id="start">
   <header>
     <h2>
-      Starting on your path
+      Starting on your way
     </h2>
     <p>
-      Choose a magic art to start the journey.
+      Choose your path and see what happens.
     </p>
   </header>
   <ul class="arts">
@@ -184,8 +183,12 @@ arts:
           <header>
             <h3>{{ resource.name }}</h3>
 
-            {% if resource.url %}
-            <a href="{{ resource.url }}" class="url label label-default">website</a>
+            {% if resource.book %}
+            <a href="{{ resource.url }}" class="book label label-default">book</a>
+            {% endif %}
+
+            {% if resource.post %}
+            <a href="{{ resource.post }}" class="book label label-default">post</a>
             {% endif %}
 
             {% if resource.video %}
@@ -196,8 +199,8 @@ arts:
             <a href="{{ resource.notes }}" class="notes label label-info">notes</a>
             {% endif %}
 
-            {% if resource.workshopper %}
-            <a href="https://npmjs.org/packages/{{ resource.workshopper }}" class="workshopper label label-warning">workshopper</a>
+            {% if resource.workshop %}
+            <a href="https://npmjs.org/packages/{{ resource.workshop }}" class="workshop label label-warning">workshop</a>
             {% endif %}
           </header>
 
