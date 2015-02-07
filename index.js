@@ -10,12 +10,7 @@ if (process.argv[2] === '-w') {
   }));
 }
 
-m.use(plugins.collections({
-  arts: {
-    pattern: "arts/**/*",
-    sortBy: "order",
-  },
-}))
+m
 .use(plugins.markdown())
 .use(plugins.inPlace('swig'))
 .use(plugins.layouts('swig'))
