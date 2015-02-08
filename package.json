@@ -16,7 +16,7 @@
     "watch-html": "node . -w",
     "watch-js": "watchify . -o build/bundle.js",
     "watch-css": "npm run build-css && watch-run -p '**/*.less' npm run build-css",
-    "watch-assets": "watch-run -p 'assets/**/*' npm run build-assets",
+    "watch-assets": "npm run build-assets && watch-run -p 'assets/**/*' npm run build-assets",
     "watch": "mkdir -p build && rm -rf build/* && (npm run watch-html & npm run watch-js & npm run watch-css & npm run watch-assets)",
     "develop": "(npm run watch & node server)"
   },
