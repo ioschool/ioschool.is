@@ -1,9 +1,9 @@
 ---
 url: http://ioschool.is/guides/install-js
-title: Guide to Installing Node.js
+title: Guide to Installing io.js
 site_name: ioschool.is
-description: how to install Node.js for use in ioschool.
-image: images/favicon.png
+description: An i/o school guide on how to install io.js.
+image: images/icon.png
 type: article
 layout: index.html
 stylesheets:
@@ -12,19 +12,23 @@ scripts:
   - "../bundle.js"
 ---
 
-# Guide to Installing [Node.js](http://nodejs.org)
+# Guide to Installing [io.js](https://iojs.org)
 
-So you want to install Node.js, huh. Great! ＼(＾▽＾)／
+Are you ready to install [io.js](https://iojs.org)? Great! ＼(＾▽＾)／
 
-We're going to use [nvm](https://github.com/creationix/nvm) (Node Version Manager) to make this easy and awesome.
+We're going to use [nvm (Node Version Manager)](https://github.com/creationix/nvm)) to make this easy and awesome.
 
-## Installation
+## Pre-requisities
 
-First you'll need to make sure your system has a c++ compiler. For OSX, XCode will work, for Ubuntu, the build-essential and libssl-dev packages work.
+In order to install [io.js](https://iojs.org), you'll need to make sure your system has a c++ compiler.
 
-### Scripted install
+For Mac OS X, XCode will work, for Ubuntu, the build-essential and libssl-dev packages work.
 
-To install you could use the [install script][2] using cURL:
+## nvm Install
+
+### Automatic
+
+To install nvm you could use the [install script][2] using cURL:
 
     curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 
@@ -39,7 +43,7 @@ Eg: `curl ... | NVM_DIR=/usr/local/nvm bash` for a global install.
 
 <sub>*NB. The installer can use `git`, `curl`, or `wget` to download `nvm`, whatever is available.*</sub>
 
-### Manual install
+### Manual
 
 For manual install create a folder somewhere in your filesystem with the `nvm.sh` file inside it. I put mine in a folder called `nvm`.
 
@@ -54,21 +58,21 @@ To activate nvm, you need to source it from your shell:
 I always add this line to my `~/.bashrc`, `~/.profile`, or `~/.zshrc` file to have it automatically sourced upon login.
 Often I also put in a line to use a specific version of node.
 
-## Usage
+For more help or instructions, see the [nvm README](https://github.com/creationix/nvm/blob/master/README.markdown).
 
-Once we have `nvm` installed, we can use it to install the latest stable version of Node.js.
+## io.js Install
+
+Once we have `nvm` installed, we can use it to install the latest stable version of io.js.
 
 ```
-nvm install stable
-nvm use stable
-nvm alias default stable
+nvm install iojs
+nvm use iojs
+nvm alias default iojs
 ```
 
-You should now be able to run `node` (a Node.js interpreter) or `npm` (the Node Package Manager).
+You should now be able to run `node` (a Node JavaScript interpreter) or `npm` (the Node Package Manager).
 
-For more usage instructions, see the [nvm README](https://github.com/creationix/nvm/blob/master/README.markdown).
-
-Woooo, welcome to the wild world of Node.js, let the madness begin!
+Woooo, welcome to the wild world of io.js, let the festivities begin!
 
 (((o(*ﾟ▽ﾟ*)o)))
 
