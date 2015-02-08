@@ -17,6 +17,7 @@ m
   engine: 'handlebars',
   partials: {
     analytics: 'partials/analytics',
+    footer: 'partials/footer',
   },
 }))
 .build(function (err, files) {
