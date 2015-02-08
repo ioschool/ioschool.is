@@ -25,15 +25,15 @@ arts:
   - name: "Cyber Wizard Institute: Javascript"
     video: https://www.youtube.com/watch?v=kOB-V1KstIM
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/javascript.markdown
+    workshop: https://npmjs.org/package/javascripting
   - name: Javascript for Cats
     book: jsforcats.com
-  - name: Learn Javascript by adventuring around in the terminal
-    workshop: javascripting
 - name: Git(Hub)
   resources:
   - name: "Cyber Wizard Institute: Git + Github"
     video: https://www.youtube.com/watch?v=IF-z4kOi4fM
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/git.markdown
+    workshop: https://npmjs.org/package/git-it
   - name: "Code School: Try Git"
     workshop: https://try.github.io/
   - name: GitHub for Cats
@@ -43,11 +43,11 @@ arts:
   - name: i/o school - The Art of Async
     description: An introduction to async programming
     notes: /art-of-async
-    workshop: learnyounode
+    workshop: https://npmjs.org/package/learnyounode
   - name: "Cyber Wizard Institute: Intro to Node.js"
     video: https://www.youtube.com/watch?v=7RQXUlDATbY
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/node_101.md
-    workshop: learnyounode
+    workshop: https://npmjs.org/package/learnyounode
   - name: The Art of Node
     url: https://github.com/maxogden/art-of-node
   - name: Callback Hell
@@ -56,7 +56,7 @@ arts:
   resources:
   - name: substack - Streams in Node.js
     book: https://github.com/substack/stream-handbook
-    workshop: stream-adventure
+    workshop: https://npmjs.org/package/stream-adventure
     video: https://www.youtube.com/watch?v=k2jqXilcpKs
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/streams.markdown
 - name: Ecosystems
@@ -64,7 +64,7 @@ arts:
   - video: https://www.youtube.com/watch?v=B-IRNyMdYD0
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/require_modules.md
   - name: substack - browserify
-    workshop: browserify-adventure
+    workshop: https://npmjs.org/package/browserify-adventure
     book: https://github.com/substack/browserify-handbook
   - name: Finding modules
     post: http://substack.net/finding_modules
@@ -116,6 +116,7 @@ arts:
   - name: "Cyber Wizard Institute: LevelDB, blobs, magic"
     video: https://www.youtube.com/watch?v=Ssct_O1LET8
     notes: https://github.com/cyberwizardinstitute/workshops/blob/master/leveldb.markdown
+    workshop: https://npmjs.org/package/levelmeup
   - name: "Cyber Wizard Institute: SQL"
     video: https://www.youtube.com/watch?v=Esq5ms3rlo4
 - name: Apps
@@ -204,7 +205,7 @@ arts:
             {% endif %}
 
             {% if resource.workshop %}
-            <a href="https://npmjs.org/packages/{{ resource.workshop }}" class="workshop label label-warning">workshop</a>
+            <a href="{{ resource.workshop }}" class="workshop label label-warning">workshop</a>
             {% endif %}
           </header>
 
