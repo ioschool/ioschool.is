@@ -15,9 +15,9 @@
 
     <link rel="shortcut icon" href="favicon.ico" />
 
-    {% for href in stylesheets %}
-    <link rel="stylesheet" type="text/css" href="{{ href }}" />
-    {% endfor %}
+    {{#each stylesheets }}
+    <link rel="stylesheet" type="text/css" href="{{ this }}" />
+    {{/each }}
 
   </head>
   <body>
@@ -26,15 +26,13 @@
     </a>
 
     <main class="container">
-      {% autoescape false %}
-      {{ contents }}
-      {% endautoescape %}
+      {{{ contents }}}
     </main>
 
-    {% for href in scripts %}
-    <script type="text/javascript" src="{{ href }}"></script>
-    {% endfor %}
+    {{#each scripts }}
+    <script type="text/javascript" src="{{ this }}"></script>
+    {{/each }}
 
-    {% include "./analytics.swig" %}
+    {{> analytics }}
   </body>
 </html>

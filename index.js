@@ -13,7 +13,12 @@ if (process.argv[2] === '-w') {
 m
 .use(plugins.markdown())
 .use(plugins.inPlace('handlebars'))
-.use(plugins.layouts('swig'))
+.use(plugins.layouts({
+  engine: 'handlebars',
+  partials: {
+    analytics: 'partials/analytics',
+  },
+}))
 .build(function (err, files) {
   if (err) {
     console.error("message:", err.message);

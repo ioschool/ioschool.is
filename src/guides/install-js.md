@@ -5,7 +5,7 @@ site_name: ioschool.is
 description: how to install Node.js for use in ioschool.
 image: images/favicon.png
 type: article
-layout: index.swig
+layout: index.html
 stylesheets:
   - "../bundle.css"
 scripts:
