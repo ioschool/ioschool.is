@@ -12,7 +12,7 @@ if (process.argv[2] === '-w') {
 
 m
 .use(plugins.markdown())
-.use(plugins.inPlace('swig'))
+.use(plugins.inPlace('handlebars'))
 .use(plugins.layouts('swig'))
 .build(function (err, files) {
   if (err) {

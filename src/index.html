@@ -127,13 +127,16 @@ arts:
   - name: Human Javascript
     book: http://read.humanjavascript.com
 ---
-<header class="page-header">
-  <h1>
-    {{ title }}
-  </h1>
-  <p>
-    {{ description }}
-  </p>
+<header class="page page-header">
+  <img src="images/icon.svg" class="icon img-responsive" />
+  <div class="text">
+    <h1>
+      {{ title }}
+    </h1>
+    <p>
+      {{ description }}
+    </p>
+  </div>
 </header>
 
 <section id="scan">
@@ -176,49 +179,49 @@ arts:
     </p>
   </header>
   <ul class="arts">
-  {% for art in arts %}
+  {{#each arts }}
     <li class="art">
       <header>
         <h2>
-          {{ art.name }}
+          {{ name }}
         </h2>
       </header>
       <ul class="resources list-group">
-        {% for resource in art.resources %}
+        {{#each resources }}
         <li class="resource list-group-item">
           <header>
-            <h3>{{ resource.name }}</h3>
+            <h3>{{ name }}</h3>
 
-            {% if resource.book %}
-            <a href="{{ resource.book }}" class="book label label-default">book</a>
-            {% endif %}
+            {{#if book }}
+            <a href="{{ book }}" class="book label label-default">book</a>
+            {{/if }}
 
-            {% if resource.post %}
-            <a href="{{ resource.post }}" class="book label label-default">post</a>
-            {% endif %}
+            {{#if post }}
+            <a href="{{ post }}" class="book label label-default">post</a>
+            {{/if }}
 
-            {% if resource.video %}
-            <a href="{{ resource.video }}" class="video label label-success">video</a>
-            {% endif %}
+            {{#if video }}
+            <a href="{{ video }}" class="video label label-success">video</a>
+            {{/if }}
 
-            {% if resource.notes %}
-            <a href="{{ resource.notes }}" class="notes label label-info">notes</a>
-            {% endif %}
+            {{#if notes }}
+            <a href="{{ notes }}" class="notes label label-info">notes</a>
+            {{/if }}
 
-            {% if resource.workshop %}
-            <a href="{{ resource.workshop }}" class="workshop label label-warning">workshop</a>
-            {% endif %}
+            {{#if workshop }}
+            <a href="{{ workshop }}" class="workshop label label-warning">workshop</a>
+            {{/if }}
           </header>
 
-          {% if resource.description %}
+          {{#if description }}
           <p>
-            {{ resource.description }}
+            {{ description }}
           </p>
-          {% endif %}
+          {{/if }}
         </li>
-      {% endfor %}
+      {{/each}}
       </ul>
     </li>
-  {% endfor %}
+  {{/each }}
   </ul>
 </section>
