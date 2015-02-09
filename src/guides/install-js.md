@@ -14,7 +14,7 @@ scripts:
 
 # Guide to Installing [io.js](https://iojs.org)
 
-Are you ready to install [io.js](https://iojs.org) (a spork of [Node.js](https://nodejs.org))? Great! ＼(＾▽＾)／
+Are you ready to install [io.js](https://iojs.org) (a [spork](http://thechangelog.com/139/) of [Node.js](https://nodejs.org))? Great! ＼(＾▽＾)／
 
 We're going to use [nvm (Node Version Manager)](https://github.com/creationix/nvm)) to make this easy and awesome.
 
