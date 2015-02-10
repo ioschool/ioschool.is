@@ -54,6 +54,7 @@ arts:
   resources:
   - name: The Art of I/O
     description: A magical introduction to input and output signals.
+    slides: http://ioschool.is/art-of-io
     notes: http://ioschool.is/art-of-io?notes=true
     workshop: https://npmjs.org/package/learnyounode
   - name: "Cyber Wizard Institute: Intro to Node.js"
@@ -216,6 +217,10 @@ arts:
 
             {{#if video }}
             <a href="{{ video }}" class="video label label-success">video</a>
+            {{/if }}
+
+            {{#if slides }}
+            <a href="{{ slides }}" class="slides label label-info">slides</a>
             {{/if }}
 
             {{#if notes }}
