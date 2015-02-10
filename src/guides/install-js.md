@@ -18,13 +18,15 @@ Are you ready to install [io.js](https://iojs.org) (a [spork](http://thechangelo
 
 We're going to use [nvm (Node Version Manager)](https://github.com/creationix/nvm)) to make this easy and awesome.
 
-## Pre-requisities
+## 0. Pre-Requisities
 
 In order to install [io.js](https://iojs.org), you'll need to make sure your system has a c++ compiler.
 
 For Mac OS X, XCode will work, for Ubuntu, the build-essential and libssl-dev packages work.
 
-## nvm Install
+---
+
+## 1. Install nvm
 
 ### Automatic
 
@@ -55,7 +57,9 @@ Often I also put in a line to use a specific version of node.
 
 For more help or instructions, see the [nvm README](https://github.com/creationix/nvm/blob/master/README.markdown).
 
-## io.js Install
+---
+
+## 2. Install io.js
 
 Once we have `nvm` installed, we can use it to install the latest stable version of io.js.
 
