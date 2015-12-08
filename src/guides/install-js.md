@@ -34,6 +34,10 @@ To install nvm you could use the [install script][2] using cURL:
 
     curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 
+To activate nvm, you need to source it from your shell:
+
+    source ~/.nvm/nvm.sh
+
 or Wget:
 
     wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
